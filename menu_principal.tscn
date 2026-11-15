@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://h50bmfm6s736"]
+
+[sub_resource type="GDScript" id="GDScript_x7udj"]
+script/source = "extends Button
+
+
+const ESCENA_NIVEL_1 = \"res://Niveles/Nivel1.tscn\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(ESCENA_NIVEL_1)
+"
+
+[node name="MenuPrincipal" type="Control" unique_id=2066261876]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1954248701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5294118, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2048858731]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1352495218]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "El caballero de Romero"
+horizontal_alignment = 1
+
+[node name="BtnNivel1" type="Button" parent="VBoxContainer" unique_id=130107884]
+layout_mode = 2
+text = "Nivel 1"
+script = SubResource("GDScript_x7udj")
+
+[node name="BtnNivel2" type="Button" parent="VBoxContainer" unique_id=1828024333]
+layout_mode = 2
+text = "Proximamente"
+
+[node name="BtnSalir" type="Button" parent="VBoxContainer" unique_id=1828478259]
+layout_mode = 2
+text = "Salir
+"
+
+[connection signal="pressed" from="VBoxContainer/BtnNivel1" to="VBoxContainer/BtnNivel1" method="_on_pressed"]

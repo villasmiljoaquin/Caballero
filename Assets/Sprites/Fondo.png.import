@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ngpgecjij24"
-path="res://.godot/imported/bola1-removebg-preview.png-3bbfe9b265ba718e41dc2f97fe57eb26.ctex"
+uid="uid://dgpr7b4ib6tjb"
+path="res://.godot/imported/Fondo.png-9666f45276893d615392b79cc3457342.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bola1-removebg-preview.png"
-dest_files=["res://.godot/imported/bola1-removebg-preview.png-3bbfe9b265ba718e41dc2f97fe57eb26.ctex"]
+source_file="res://Assets/Sprites/Fondo.png"
+dest_files=["res://.godot/imported/Fondo.png-9666f45276893d615392b79cc3457342.ctex"]
 
 [params]
 

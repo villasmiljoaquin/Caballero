@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://citiy4b6t278o"]
+
+[ext_resource type="Script" uid="uid://5h3qhwbpabsd" path="res://Personajes/Enemigo-LF/enemigo.gd" id="1_a5tj2"]
+[ext_resource type="Texture2D" uid="uid://bw78b4pan00v2" path="res://Assets/koopa.png" id="1_becj5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5tj2"]
+size = Vector2(466.66666, 899.99994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0xt8"]
+size = Vector2(51333.336, 9000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0afhb"]
+size = Vector2(5333.333, 9333.334)
+
+[node name="Enemigo1" type="CharacterBody2D" unique_id=1719654258]
+script = ExtResource("1_a5tj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1426518118]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_becj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1065955702]
+position = Vector2(7.947286e-07, 1.6666675)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_a5tj2")
+
+[node name="DetectorSuelo" type="RayCast2D" parent="." unique_id=1892139641]
+position = Vector2(23.333336, 16.666666)
+scale = Vector2(0.1, 0.1)
+target_position = Vector2(0, 387)
+collision_mask = 255
+
+[node name="ZonaAtaque" type="Area2D" parent="." unique_id=813336157]
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaAtaque" unique_id=917990633]
+visible = false
+position = Vector2(-0.00012715657, 16.666681)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_w0xt8")
+
+[node name="ZonaDano" type="Area2D" parent="." unique_id=47538489]
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDano" unique_id=864925503]
+position = Vector2(0, -3.1789143e-05)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_0afhb")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 140.0
-const FIREBALL_SCENE = preload("res://bola de fuego.tscn")
+const FIREBALL_SCENE = preload("res://Personajes/Enemigo-LF/bola de fuego.tscn")
 const COOLDOWN_DISPARO = 3.2
 
 var direction := 1
@@ -60,9 +60,9 @@ func actualizar_orientacion() -> void:
 func disparar() -> void:
 	var bola = FIREBALL_SCENE.instantiate()
 	bola.direction = direction
-	bola.global_position = global_position + Vector2(60 * direction, 0)
+	# Usa sprite.global_position para alinearlo con el cuerpo visual de la tortuga
+	bola.global_position = sprite.global_position + Vector2(60 * direction, -100)
 	get_parent().add_child(bola)
-
 
 func _on_zona_ataque_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):

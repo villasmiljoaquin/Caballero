@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED = 350.0
+const SPEED = 550.0
 var direction := 1
 var velocity := Vector2.ZERO
 var devuelta := false
